@@ -22,7 +22,7 @@ $(document).ready(function() {
     $('.blockMining').on('click', function(){
         $.ajax({
                     type : 'POST',
-                    url : 'http://www.unflasked.com/mine_block'
+                    url : 'https://imageclassifiers.herokuapp.com/mine_block'
         })
         .done(function(data) {
 
@@ -90,7 +90,7 @@ $(document).ready(function() {
     $('.validationCheck').on('click', function(){
         $.ajax({
                     type : 'POST',
-                    url : 'http://www.unflasked.com/validation_check'
+                    url : 'https://imageclassifiers.herokuapp.com/validation_check'
         })
         .done(function(data) {
             if (data.error) {
@@ -110,7 +110,7 @@ $(document).ready(function() {
     $('.resetChain').on('click', function(){
         $.ajax({
                     type : 'POST',
-                    url : 'http://www.unflasked.com/reset'
+                    url : 'https://imageclassifiers.herokuapp.com/reset'
         })
         .done(function(data) {
             if (data.error) {
@@ -167,7 +167,7 @@ $(document).ready(function() {
                 amount : $('#amount').val()
                 },
                 type : 'POST',
-                url : 'http://www.unflasked.com/add_transaction'
+                url : 'https://imageclassifiers.herokuapp.com/add_transaction'
 
         })
 
