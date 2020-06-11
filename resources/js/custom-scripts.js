@@ -22,7 +22,7 @@ $(document).ready(function() {
     $('.blockMining').on('click', function(){
         $.ajax({
                     type : 'POST',
-                    url : 'https://imageclassifiers.herokuapp.com/mine_block'
+                    url : 'https://compilationapp.herokuapp.com/blockchain/'
         })
         .done(function(data) {
 
@@ -89,8 +89,8 @@ $(document).ready(function() {
 
     $('.validationCheck').on('click', function(){
         $.ajax({
-                    type : 'POST',
-                    url : 'https://imageclassifiers.herokuapp.com/validation_check'
+                    type : 'GET',
+                    url : 'https://compilationapp.herokuapp.com/blockchain/validation-check'
         })
         .done(function(data) {
             if (data.error) {
@@ -110,7 +110,7 @@ $(document).ready(function() {
     $('.resetChain').on('click', function(){
         $.ajax({
                     type : 'POST',
-                    url : 'https://imageclassifiers.herokuapp.com/reset'
+                    url : 'https://compilationapp.herokuapp.com/blockchain/reset'
         })
         .done(function(data) {
             if (data.error) {
@@ -167,7 +167,7 @@ $(document).ready(function() {
                 amount : $('#amount').val()
                 },
                 type : 'POST',
-                url : 'https://imageclassifiers.herokuapp.com/add_transaction'
+                url : 'https://compilationapp.herokuapp.com/blockchain/transaction'
 
         })
 
